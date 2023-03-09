@@ -1,11 +1,11 @@
 Model Information:
-* title:	Retro Computer Setup (FREE)
-* source:	https://sketchfab.com/3d-models/retro-computer-setup-free-82eaf2047e0447a1bfea22482f1d1404
-* author:	Brandon Westlake (https://sketchfab.com/dr.badass2142)
+* title:	AI Robot - Personal Project
+* source:	https://sketchfab.com/3d-models/ai-robot-personal-project-a5316328ae8e49a595419ecac8c03624
+* author:	rafael.r92f (https://sketchfab.com/rafaelr92f)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Retro Computer Setup (FREE)" (https://sketchfab.com/3d-models/retro-computer-setup-free-82eaf2047e0447a1bfea22482f1d1404) by Brandon Westlake (https://sketchfab.com/dr.badass2142) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "AI Robot - Personal Project" (https://sketchfab.com/3d-models/ai-robot-personal-project-a5316328ae8e49a595419ecac8c03624) by rafael.r92f (https://sketchfab.com/rafaelr92f) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
