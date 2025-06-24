@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Net | Solution Architect</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Outfit', sans-serif;
+      color: #f8fafc;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+    #three-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+    #parallax-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      background: radial-gradient(ellipse at center, #1e293b 0%, #0f172a 100%);
+      overflow: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.4s ease;
+    }
+    .glass:hover {
+      transform: scale(1.02);
+    }
+    .highlight {
+      background: linear-gradient(to right, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      filter: blur(30px);
+      pointer-events: none;
+      transition: transform 0.1s ease-out;
+    }
+    .section-content {
+      max-width: 1024px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="three-container"></div>
+  <div id="parallax-bg">
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass py-4 px-8 shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold highlight">Sky Net</h1>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white text-2xl">☰</button>
+      </div>
+      <div id="menu" class="hidden md:flex space-x-6 text-base">
+        <a href="#hero" class="hover:text-sky-400 transition">Home</a>
+        <a href="#about" class="hover:text-sky-400 transition">About</a>
+        <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+        <a href="#blog" class="hover:text-sky-400 transition">Blog</a>
+        <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 px-4 text-base">
+      <a href="#hero" class="hover:text-sky-400 transition">Home</a>
+      <a href="#about" class="hover:text-sky-400 transition">About</a>
+      <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+      <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+      <a href="#blog" class="hover:text-sky-400 transition">Blog</a>
+      <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" data-aos="zoom-in">
+    <div class="section-content">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">I design scalable <span class="highlight">software architecture</span></h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Over a decade of experience delivering clean, resilient systems for enterprises worldwide.</p>
+      <a href="#projects" class="bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-300 hover:to-indigo-400 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg transition">🚀 See My Work</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <div class="section-content">
+      <h3 class="text-4xl font-semibold mb-6 highlight">About Me</h3>
+      <p class="text-xl text-gray-300 leading-relaxed">I'm a passionate Solution Architect with deep knowledge in distributed systems, cloud-native development, and scalable microservice-based infrastructure.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-aos="fade-up">
+    <div class="section-content">
+      <h3 class="text-4xl font-semibold mb-10 highlight">Skills</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass p-6 rounded-xl">
+          <h4 class="text-2xl font-semibold mb-3">Cloud & DevOps</h4>
+          <ul class="text-gray-300 text-base space-y-2">
+            <li>AWS, Azure, GCP</li>
+            <li>Kubernetes, Docker, Helm</li>
+            <li>CI/CD, Terraform, GitOps</li>
+          </ul>
+        </div>
+        <div class="glass p-6 rounded-xl">
+          <h4 class="text-2xl font-semibold mb-3">Architecture</h4>
+          <ul class="text-gray-300 text-base space-y-2">
+            <li>Microservices, Clean Architecture</li>
+            <li>Event-driven Design, DDD</li>
+            <li>System Design, Security</li>
+          </ul>
+        </div>
+        <div class="glass p-6 rounded-xl">
+          <h4 class="text-2xl font-semibold mb-3">Database & Messaging</h4>
+          <ul class="text-gray-300 text-base space-y-2">
+            <li>PostgreSQL, MongoDB, Redis</li>
+            <li>Kafka, RabbitMQ</li>
+            <li>ElasticSearch, TimescaleDB</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <div class="section-content">
+      <h3 class="text-4xl font-semibold mb-10 highlight">Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass p-6 rounded-xl">
+          <h4 class="text-2xl font-semibold mb-2">Cloud Monitoring Tool</h4>
+          <p class="text-gray-300 text-base">Built a real-time monitoring dashboard using Prometheus + Grafana integrated with AWS.</p>
+        </div>
+        <div class="glass p-6 rounded-xl">
+          <h4 class="text-2xl font-semibold mb-2">CI/CD Automation</h4>
+          <p class="text-gray-300 text-base">Implemented GitOps pipeline with ArgoCD and Kubernetes to reduce release time by 60%.</p>
+        </div>
+        <div class="glass p-6 rounded-xl">
+          <h4 class="text-2xl font-semibold mb-2">Multi-Tenant SaaS</h4>
+          <p class="text-gray-300 text-base">Architected scalable SaaS platform with user isolation, RBAC, and dynamic provisioning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <div class="section-content w-full max-w-2xl mx-auto">
+      <h3 class="text-4xl font-semibold mb-8 highlight">Contact Me</h3>
+      <form class="glass p-6 rounded-xl space-y-6">
+        <div class="flex flex-col">
+          <label class="text-left text-white mb-1 font-medium">Name</label>
+          <input type="text" placeholder="Your Name" class="p-4 rounded bg-white/10 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-sky-400" required>
+        </div>
+        <div class="flex flex-col">
+          <label class="text-left text-white mb-1 font-medium">Email</label>
+          <input type="email" placeholder="you@example.com" class="p-4 rounded bg-white/10 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-sky-400" required>
+        </div>
+        <div class="flex flex-col">
+          <label class="text-left text-white mb-1 font-medium">Message</label>
+          <textarea rows="5" placeholder="Your message..." class="p-4 rounded bg-white/10 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-sky-400" required></textarea>
+        </div>
+        <button type="submit" class="bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 text-white font-semibold text-lg py-3 rounded-full shadow-lg transition">📨 Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.addEventListener('mousemove', (e) => {
+      document.getElementById('circle1').style.transform = `translate(${e.clientX / 20}px, ${e.clientY / 20}px)`;
+      document.getElementById('circle2').style.transform = `translate(${e.clientX / -30}px, ${e.clientY / -30}px)`;
+    });
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- THREE.js stars -->
+  <script type="module">
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js';
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById("three-container").appendChild(renderer.domElement);
+    camera.position.z = 50;
+    const starGeometry = new THREE.BufferGeometry();
+    const starVertices = [];
+    for (let i = 0; i < 3000; i++) {
+      starVertices.push((Math.random() - 0.5) * 400, (Math.random() - 0.5) * 400, (Math.random() - 0.5) * 100);
+    }
+    starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+    const starMaterial = new THREE.PointsMaterial({ color: 0x38bdf8, size: 1 });
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
+    function animate() {
+      requestAnimationFrame(animate);
+      stars.rotation.y += 0.0007;
+      stars.rotation.x += 0.0003;
+      renderer.render(scene, camera);
+    }
+    animate();
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
